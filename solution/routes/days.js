@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const Day = require('../models/day');
 const Restaurant = require('../models/restaurant');
+
 router.get('/days/findAll', (req, res, next) => {
 	Day.findAll().then(days => {
 		res.send(days);
@@ -36,6 +37,7 @@ router.delete('/days/:id', (req, res, next) => {
 })
 
 router.post('/days/:id/restaurants', (req, res, next) => {
+
 })
 
 router.delete('/days/:id/restaurants', (req, res, next) => {
