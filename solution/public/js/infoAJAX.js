@@ -1,4 +1,6 @@
-$.get('/api/hotels')
+var data = $(function(){
+
+	$.get('/api/hotels')
 	.then(hotels => {
 		let $hotelList = hotels.map(hotel => {
 			return `<option>${hotel.name}</option>`
@@ -25,3 +27,7 @@ $.get('/api/activities')
 		$('#activity-choices').empty().append($activityList)
 	})
 	.catch(console.error.bind(console));
+
+$.get('/api/')
+
+}());

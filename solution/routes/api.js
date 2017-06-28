@@ -9,19 +9,19 @@ router.get('/', (req, res, next) => {
 
 router.get('/hotels', function (req, res, next) {
 	Hotel.findAll().then(data => {
-		res.send(data)
+		res.send(data);
 	});
 });
 
 router.get('/restaurants', function (req, res, next) {
 	Restaurant.findAll().then(data => {
-		res.send(data)
+		res.send(data);
 	});
 });
 
 router.get('/activities', function (req, res, next) {
 	Activity.findAll().then(data => {
-		res.send(data)
+		res.send(data);
 	});
 
 });

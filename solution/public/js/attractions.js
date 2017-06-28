@@ -10,16 +10,16 @@
 var attractionsModule = (function () {
 
   // application state
-
-  var enhanced = {
-    hotels: hotels.map(attractionModule.create),
-    restaurants: restaurants.map(attractionModule.create),
-    activities: activities.map(attractionModule.create),
-  };
-
+  function hello() {
+    var enhanced = {
+      hotels: hotels.map(attractionModule.create),
+      restaurants: restaurants.map(attractionModule.create),
+      activities: activities.map(attractionModule.create),
+    }
+  }
   // private helper methods (only available inside the module)
 
-  function findById (array, id) {
+  function findById(array, id) {
     return array.find(function (el) {
       return +el.id === +id;
     });
